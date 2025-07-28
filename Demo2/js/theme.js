@@ -1330,11 +1330,11 @@ function pureFadeOut(e) {
   });
 
   $('.shopping-cart .btn-checkout').on('click', function() {
-    window.location.href='./shop_checkout.html';
+    window.location.href='./checkout.html';
   });
 
   $('.checkout-form .btn-checkout').on('click', function() {
-    window.location.href='./shop_order_complete.html';
+    window.location.href='./ordercomplete.html';
   });
 
   $(document).on('click', '.cart-table .remove-cart', function(e) {
