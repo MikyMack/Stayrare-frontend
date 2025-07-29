@@ -498,12 +498,52 @@
             </div>
             <span class="reviews-note text-lowercase text-secondary ms-1">1k+ reviews</span>
           </div>
-          <div class="product-single__price">
-            <span class="current-price">₹449</span>
-          </div>
+      <div class="product-card__price d-flex align-items-center">
+                      <span class="money price-old">₹529</span>
+                      <span class="money price">₹399</span>
+                    </div>
           <div class="product-single__short-desc">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam at quas ducimus distinctio expedita, maiores sint alias voluptates animi, asperiores iure pariatur perferendis, possimus doloribus corrupti tempora rem laborum?.</p>
           </div>
+               <form name="addtocart-form" method="post">
+              <div class="product-single__swatches">
+                <div class="product-swatch text-swatches">
+                  <label>Sizes</label>
+                  <div class="swatch-list">
+                    <input type="radio" name="size" id="swatch-1">
+                    <label class="swatch js-swatch" for="swatch-1" aria-label="Extra Small" data-bs-toggle="tooltip" data-bs-placement="top" title="Extra Small">XS</label>
+                    <input type="radio" name="size" id="swatch-2" checked>
+                    <label class="swatch js-swatch" for="swatch-2" aria-label="Small" data-bs-toggle="tooltip" data-bs-placement="top" title="Small">S</label>
+                    <input type="radio" name="size" id="swatch-3">
+                    <label class="swatch js-swatch" for="swatch-3" aria-label="Middle" data-bs-toggle="tooltip" data-bs-placement="top" title="Middle">M</label>
+                    <input type="radio" name="size" id="swatch-4">
+                    <label class="swatch js-swatch" for="swatch-4" aria-label="Large" data-bs-toggle="tooltip" data-bs-placement="top" title="Large">L</label>
+                    <input type="radio" name="size" id="swatch-5">
+                    <label class="swatch js-swatch" for="swatch-5" aria-label="Extra Large" data-bs-toggle="tooltip" data-bs-placement="top" title="Extra Large">XL</label>
+                  </div>
+
+                </div>
+                <div class="product-swatch color-swatches">
+                  <label>Color</label>
+                  <div class="swatch-list">
+                    <input type="radio" name="color" id="swatch-11">
+                    <label class="swatch swatch-color js-swatch" for="swatch-11" aria-label="Black" data-bs-toggle="tooltip" data-bs-placement="top" title="Black" style="color: #222"></label>
+                    <input type="radio" name="color" id="swatch-12" checked>
+                    <label class="swatch swatch-color js-swatch" for="swatch-12" aria-label="Red" data-bs-toggle="tooltip" data-bs-placement="top" title="Red" style="color: #C93A3E"></label>
+                    <input type="radio" name="color" id="swatch-13">
+                    <label class="swatch swatch-color js-swatch" for="swatch-13" aria-label="Grey" data-bs-toggle="tooltip" data-bs-placement="top" title="Grey" style="color: #E4E4E4"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="product-single__addtocart">
+                <div class="qty-control position-relative">
+                  <input type="number" name="quantity" value="1" min="1" class="qty-control__number text-center">
+                  <div class="qty-control__reduce">-</div>
+                  <div class="qty-control__increase">+</div>
+                </div><!-- .qty-control -->
+                <button type="submit" class="btn btn-primary btn-addtocart js-open-aside" data-aside="cartDrawer">Buy Now</button>
+              </div>
+            </form>
           <form name="addtocart-form" method="post">
             <div class="product-single__addtocart">
               <div class="qty-control position-relative">
