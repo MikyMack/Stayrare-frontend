@@ -26,7 +26,97 @@
 
   <!-- Document Title -->
   <title>HOME | STAY RARE</title>
+<style>
+.header-top {
+  padding: 10px 15px;
+  background: #3b1f58;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.header-center {
+  flex-grow: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.header-right {
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+/* Improved Marquee Styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-content span {
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.marquee-content span:nth-child(even) {
+  color: rgba(255,255,255,0.5); /* Style for bullet separators */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-top {
+    flex-wrap: wrap;
+    padding: 8px 10px;
+  }
+  
+  .header-left,
+  .header-center,
+  .header-right {
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  .header-center {
+    order: 3;
+    margin: 8px 0;
+  }
+  
+  .marquee-track {
+    animation-duration: 15s; /* Faster on mobile */
+  }
+}
+</style>
 </head>
 
 
@@ -334,23 +424,42 @@
   <!-- Header Type 2 -->
   <header id="header" class="header header-fullwidth header-transparent-bg">
 <div class="header-top d-flex top-hdr color-white align-items-center">
-  <ul class="list-unstyled d-flex flex-1 gap-3 m-0">
-    <li><a href="orderTrack.html" class="menu-link menu-link_us-s color-white">Shipping</a></li>
-    <li><a href="orders.html" class="menu-link menu-link_us-s color-white"> Orders</a></li>
-  </ul>
-  
-  <!-- Marquee Container -->
-<div class="marquee-container mx-auto" style="width: 200px;">
-    <div class="marquee-track">
-      <div class="marquee-content">
-        <span>WELCOME TO STAY RARE</span>
-        <span>LOGIN FOR 10% OFF</span>
+  <!-- Left Side - Navigation Links -->
+  <div class="header-left">
+    <ul class="list-unstyled d-flex gap-3 m-0">
+      <li><a href="orderTrack.html" class="menu-link menu-link_us-s color-white">Shipping</a></li>
+      <li><a href="orders.html" class="menu-link menu-link_us-s color-white">Orders</a></li>
+    </ul>
+  </div>
+
+  <!-- Center - Marquee Text -->
+  <div class="header-center flex-grow-1 mx-2">
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>WELCOME TO STAY RARE</span>
+          <span>•</span>
+          <span>LOGIN FOR 10% OFF</span>
+          <span>•</span>
+          <span>FREE SHIPPING ON ORDERS OVER ₹2000</span>
+          <span>•</span>
+        </div>
+        <!-- Duplicate content for seamless looping -->
+        <div class="marquee-content" aria-hidden="true">
+          <span>WELCOME TO STAY RARE</span>
+          <span>•</span>
+          <span>LOGIN FOR 10% OFF</span>
+          <span>•</span>
+          <span>FREE SHIPPING ON ORDERS OVER ₹2000</span>
+          <span>•</span>
+        </div>
       </div>
     </div>
   </div>
-  
-  <div class="heeader-top__right flex-1 d-flex gap-1 justify-content-end">
-    <ul class="social-links list-unstyled d-flex flex-wrap mb-0">
+
+  <!-- Right Side - Social Links -->
+  <div class="header-right">
+    <ul class="social-links list-unstyled d-flex gap-2 mb-0">
       <li>
         <a href="#" class="footer__social-link d-block color-white">
           <svg class="svg-icon svg-icon_facebook" width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg"><use href="#icon_facebook" /></svg>
@@ -475,8 +584,10 @@
           "delay": 5000
         },
         "slidesPerView": 1,
-        "effect": "fade",
-        "loop": true,
+       "effect": "slide",
+  "loop": true,
+  "speed": 800,
+  "direction": "horizontal",
         "pagination": {
           "el": ".slideshow-pagination",
           "type": "bullets",
@@ -1582,7 +1693,7 @@
 
     
 
-    <section class="category-carousel container">
+    <section class="category-carousel container cat-sec">
       <h2 class="section-title text-uppercase fw-bold text-center mb-3 pb-xl-2 mb-xl-4 gradient-text">Spotlight Deals</h2>
 
       <div class="position-relative">
@@ -1649,12 +1760,11 @@
       </div><!-- /.position-relative -->
     </section>
 
-    <div class="mb-4 pb-4 mb-xl-4 mt-xl-3 pt-xl-3 pb-xl-4"></div>
 
-<section class="rare-hero">
+<section class="rare-hero banner-sec">
   <div class="rare-hero__container">
     <img src="../images/stayrare/poster-6.png" alt="Featured Collection" class="rare-hero__image">
-    <div class="rare-hero__content">
+    <!-- <div class="rare-hero__content">
       <h2 class="rare-hero__title">CUSTOMIZED</h2>
       <h3 class="rare-title">T-SHIRTS</h3>
      <h2 class="rare-hero__title">JUST FOR YOU</h2>
@@ -1664,14 +1774,14 @@
 </svg></span>
         Call Now
       </a>
-    </div>
+    </div> -->
   </div>
 </section>
 
 
-    <div class="mb-4 pb-4 mb-xl-4 mt-xl-3 pt-xl-3 pb-xl-4"></div>
+   
 
-    <section class="products-carousel container">
+    <section class="products-carousel container best-seller-sec">
       <h2 style="color: #3B1E58;" class="section-title text-uppercase fw-bold text-center mb-4 pb-xl-2 mb-xl-4 gradient-text">Best Sellers</h2>
 
       <div class="position-relative">
@@ -1949,10 +2059,25 @@
 
     </section><!-- /.products-carousel container -->
 
-    <div class="mb-4 pb-4 mb-xl-4 mt-xl-3 pt-xl-3 pb-xl-4"></div>
-
-    <section class="blog-carousel container">
-      <h2 class="section-title text-uppercase fw-bold text-center mb-3 pb-xl-2 mb-xl-4">Latest News</h2>
+  
+<section class="rare-hero banner-sec">
+  <div class="rare-hero__container">
+    <img src="../images/stayrare/banner-1.png" alt="Featured Collection" class="rare-hero__image">
+    <!-- <div class="rare-hero__content">
+      <h2 class="rare-hero__title">CUSTOMIZED</h2>
+      <h3 class="rare-title">T-SHIRTS</h3>
+     <h2 class="rare-hero__title">JUST FOR YOU</h2>
+      <a href="tel:+1234567890" class="rare-hero__cta">
+        <span class="rare-hero__cta-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 21 3 13.93 3 5.5a1 1 0 011-1H7.5a1 1 0 011 1c0 1.21.2 2.42.57 3.54a1 1 0 01-.24 1.05l-2.2 2.2z"/>
+</svg></span>
+        Call Now
+      </a>
+    </div> -->
+  </div>
+</section>
+    <section class="blog-carousel container blog-sec">
+      <h2 class="section-title text-uppercase fw-bold text-center mb-3 pb-xl-2 mb-xl-4 gradient-text">Latest News</h2>
 
       <div class="position-relative">
         <div class="swiper-container js-swiper-slider"
@@ -2038,7 +2163,7 @@
       </div><!-- /.position-relative -->
     </section>
 <section class="testimonial-carousel container">
-  <h2 class="section-title text-uppercase fw-bold text-center mb-4 mb-lg-5">What People Say About Us</h2>
+  <h2 class="section-title text-uppercase fw-bold text-center mb-4 mb-lg-5 gradient-text">What People Say About Us</h2>
 
   <div class="position-relative">
     <div class="swiper-container js-swiper-slider"
@@ -2078,7 +2203,7 @@
         <div class="swiper-slide testi">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">“</div>
+              
               <div style="display: flex; justify-content: space-between; align-items: center;">
     <div class="star-rating">
                 <span class="star">★</span>
@@ -2108,7 +2233,7 @@
         <div class="swiper-slide testi">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">“</div>
+            
                      <div style="display: flex; justify-content: space-between; align-items: center;">
     <div class="star-rating">
                 <span class="star">★</span>
@@ -2137,7 +2262,7 @@
         <div class="swiper-slide testi">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">“</div>
+            
                      <div style="display: flex; justify-content: space-between; align-items: center;">
     <div class="star-rating">
                 <span class="star">★</span>
@@ -2166,7 +2291,7 @@
         <div class="swiper-slide testi">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              <div class="quote-icon">“</div>
+           
                  <div style="display: flex; justify-content: space-between; align-items: center;">
     <div class="star-rating">
                 <span class="star">★</span>
