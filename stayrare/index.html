@@ -477,14 +477,33 @@
         <li><a href="orders.html" class="menu-link menu-link_us-s color-white"> Orders</a></li>
       </ul>
 
-      <!-- Marquee Container -->
-      <div class="marquee-container mx-auto">
-        <div class="marquee-track">
-          <div class="marquee-content">
-            <span>WELCOME TO STAY RARE</span>
-            <span>LOGIN FOR 10% OFF</span>
+      <!-- Marquee Container with more width, catchy sentence, and infinite loop -->
+      <div class="marquee-container mx-auto flex-grow-1" style="min-width:0; flex-basis:50%; max-width:1100px; overflow:hidden;">
+        <div class="marquee-track" style="white-space:nowrap; animation: marqueeLoop 28s linear infinite;">
+          <div class="marquee-content d-inline-block" style="white-space:nowrap;">
+            <span class="fw-bold text-warning" style="margin-right:2.5rem;">WELCOME TO STAY RARE</span>
+            <span style="margin-right:2.5rem;">LOGIN FOR 10% OFF</span>
+            <span class="fw-bold text-warning" style="margin-right:2.5rem;">🔥 Unleash Your Style – New Arrivals Just Dropped! 🔥</span>
+            <span style="margin-right:2.5rem;">FREE SHIPPING ON ORDERS OVER ₹999</span>
+            <!-- Repeat for seamless loop -->
+            <span class="fw-bold text-warning" style="margin-right:2.5rem;">WELCOME TO STAY RARE</span>
+            <span style="margin-right:2.5rem;">LOGIN FOR 10% OFF</span>
+            <span class="fw-bold text-warning" style="margin-right:2.5rem;">🔥 Unleash Your Style – New Arrivals Just Dropped! 🔥</span>
+            <span style="margin-right:2.5rem;">FREE SHIPPING ON ORDERS OVER ₹999</span>
           </div>
         </div>
+        <style>
+          @keyframes marqueeLoop {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (max-width: 768px) {
+            .marquee-container {
+              max-width: 100vw !important;
+              flex-basis: 100% !important;
+            }
+          }
+        </style>
       </div>
 
       <div class="heeader-top__right flex-1 d-flex gap-1 justify-content-end">
