@@ -19117,7 +19117,7 @@ textarea.form-control.is-invalid {
 
 @media (min-width: 992px) {
   .footer-middle {
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 }
 
@@ -19183,7 +19183,7 @@ textarea.form-control.is-invalid {
 }
 
 .footer-bottom {
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   border-top: 1px solid #cfcdcd;
 }
@@ -21286,7 +21286,7 @@ font-family: Jost, sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-bottom: 1.875rem;
 }
 
@@ -24718,3 +24718,5 @@ body.coming-soon-page .header {
 .slider-card {
   gap: 20px;
 }
+
+
