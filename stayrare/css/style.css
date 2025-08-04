@@ -105,6 +105,7 @@ body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #f6f8fc;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9642,11 +9643,12 @@ progress {
 /*------------------ Shop Checkout --------------*/
 /*-----------------------------------------------*/
 body {
-  background-color: #ffffff;
+  background-color: #f6f8fc;
 }
 
 main {
   overflow: hidden;
+  background-color: #f6f8fc;
 }
 
 .flex-1 {
