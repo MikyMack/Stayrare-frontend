@@ -105,6 +105,7 @@ body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #f6f8fc;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9642,11 +9643,12 @@ progress {
 /*------------------ Shop Checkout --------------*/
 /*-----------------------------------------------*/
 body {
-  background-color: #ffffff;
+  background-color: #f6f8fc;
 }
 
 main {
   overflow: hidden;
+  background-color: #f6f8fc;
 }
 
 .flex-1 {
@@ -19115,12 +19117,12 @@ textarea.form-control.is-invalid {
 
 @media (min-width: 992px) {
   .footer-middle {
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 }
 
 .footer-logo {
-  height: 100px;
+  height: 60px;
 }
 
 .top-hdr {
@@ -19165,6 +19167,7 @@ textarea.form-control.is-invalid {
 
 .footer-address {
   margin-bottom: 0.875rem;
+  margin-top: 1rem;
 }
 
 .footer__social-link {
@@ -19181,7 +19184,7 @@ textarea.form-control.is-invalid {
 }
 
 .footer-bottom {
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   border-top: 1px solid #cfcdcd;
 }
@@ -21165,7 +21168,7 @@ font-family: Jost, sans-serif;
 }
 .details-rate{
   font-size: 25px;
-  font-weight: 800;;
+  font-weight: 700;;
 }
 @media (max-width: 575.98px) {
   .product-single__details-tab>.nav-tabs {
@@ -21287,7 +21290,7 @@ font-family: Jost, sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-bottom: 1.875rem;
 }
 
@@ -24719,3 +24722,5 @@ body.coming-soon-page .header {
 .slider-card {
   gap: 20px;
 }
+
+
