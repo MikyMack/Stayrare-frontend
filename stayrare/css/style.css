@@ -20980,12 +20980,14 @@ textarea.form-control.is-invalid {
 font-family: Jost, sans-serif;
 }
 .details-ofr{
-  background-color: #3B1E58;
-  color: white;
+
+  color: #3B1E58;
   padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.product-single__rating {
+.product-single__rating { 
   display: flex;
   align-items: center;
   gap: 0.625rem;
@@ -21163,6 +21165,7 @@ font-family: Jost, sans-serif;
 }
 .details-rate{
   font-size: 25px;
+  font-weight: 800;;
 }
 @media (max-width: 575.98px) {
   .product-single__details-tab>.nav-tabs {
